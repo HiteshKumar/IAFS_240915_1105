@@ -491,18 +491,18 @@
         <!-- End of the Dashboard-->
 
        <!-- Start Venue -->
-        <div id="dvvVenue" class="hidedv">
-            <div data-role="ui-content_fav">
+        <div id="dvvVenue" class="hidedv" style="height:800px; width:100%;">
+            <div>
                 Indira Gandhi Stadium Complex, New Delhi India
       
      <!--        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224328.02353710987!2d77.14284574999999!3d28.535951249999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce0151053471f%3A0x763527d859a397ff!2sindira+gandhi+stadium!5e0!3m2!1sen!2sin!4v1442923699484" width="100%" height="512" frameborder="0" style="border:0" allowfullscreen></iframe>-->
      
-     <div class="jsk"  style="width:100%;height:100%; margin-bottom:20px;">
+     <div class="jsk"  style="width:100%;height:100%;">
 </div>
 
 
-                <div class="press-release-contact">
-                </div>
+                <!--<div class="press-release-contact">
+                </div>-->
             </div>
         </div>
         <!-- End of the Venue -->
@@ -2085,6 +2085,7 @@
 }
 .jsk{
 	  background-color:#fff;
+      height:100%;
 	  }
   </style>
     
@@ -2105,7 +2106,7 @@ function Location()
 		
 		//$("#mapp5").html('<iframe id="#mapp" src="'+str+'" style="width:100%;height:450px;"  frameborder="0" style="border:0" allowfullscreen></iframe>');
 		//document.getElementById("mapp5").innerHTML("gfgg");
-	$(".jsk").html('<iframe id="#mapp" src="' + str + '" style="width:100%;height:512px;"  frameborder="0" style="border:0" allowfullscreen></iframe>');
+	$(".jsk").html('<iframe id="#mapp" src="' + str + '" style="width:100%; height:100%;"  frameborder="0" style="border:0" allowfullscreen></iframe>').css("height","800px");
 		//alert(str);
 
 		}
