@@ -1,83 +1,535 @@
 var notiVal = 0;
-var venueVal = 0;
 
 $(document).ready(function () {
-    $(".circle").hide();
-    $("a").click(function () {
-        $(this).css('color', '#333');
-    });
-
+	
+	$("a").click(function(){
+		$(this).css('color','#333');
+	});
+		
     //Contact us
     $("#dvHome").removeClass('hidedv').addClass('showdv');
     $("#imgHome").attr("src", "images/home_hover.png");
     $("#imgMedi").attr("src", "images/media.png");
     $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
     $("#imgContact").click(function () {
-        showPage("imgContact");
+        $("#imgNoti").attr("src", "images/register_hover.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home.png");
+        $("#dvContactus").removeClass('hidedv').addClass('showdv');
+		 $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
 
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  
     });
     //Media List
-    $("#imgMedi").click(function () {        
-        showPage("imgMedi");
+    $("#imgMedi").click(function () {
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media_hover.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home.png");
+        $("#dvMediaList").removeClass('hidedv').addClass('showdv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
+
+
     });
     //Agenda
     $("#imgAgenda").click(function () {
-        AgendaFunc();
-        showPage("imgAgenda");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda_hover.png");
+        $("#imgHome").attr("src", "images/home.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('hidedv').addClass('showdv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
 
     });
     //About us
     $("#imgHome").click(function () {
         showPage("dvHome");
     });
-
-
-
+	
+	
+	
     //Image Gallry
     $("#AnchorPhotoGallary").click(function () {
-        photoGallaryFunc();
-        showPage("AnchorPhotoGallary");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('hidedv').addClass('showdv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('hidedv').addClass('showdv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
+
     });
     //Back Link
     $("#linkBackMediaList").click(function () {
-        showPage("linkBackMediaList");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media_hover.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home.png");
+        $("#dvMediaList").removeClass('hidedv').addClass('showdv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+       
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
     //Press Release
     $("#AnchorPresssRelease").click(function () {
-        PressReleasesFunc();
-        showPage("AnchorPresssRelease");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('hidedv').addClass('showdv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('hidedv').addClass('showdv');
+
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
     //Media Coverage
     $("#AnchorMediaCoverage").click(function () {
-        mediaCovFunc();
-        showPage("AnchorMediaCoverage");       
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('hidedv').addClass('showdv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('hidedv').addClass('showdv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
 
     });
     //Media Advisory
     $("#AnchorMediaAdvisory").click(function () {
-        MediaAdvisoryFunc();
-        showPage("AnchorMediaAdvisory");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('hidedv').addClass('showdv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+       
+
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('hidedv').addClass('showdv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
     //Speeches Statements
     $("#AnchorSpeechStatement").click(function () {
-        SpeechesFunc();
-        showPage("AnchorSpeechStatement");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('hidedv').addClass('showdv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('hidedv').addClass('showdv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
     //Document
     $("#AnchorDocument").click(function () {
-        documentFunc();
-        showPage("AnchorDocument");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('hidedv').addClass('showdv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('hidedv').addClass('showdv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
     //Login
-
+   
 
     //Dashboard
     $("#btnSubmit").click(function () {
-        // GetDashboard(uid);
+		// GetDashboard(uid);
         //$("#imgNoti").attr("src", "images/register.png");
         //$("#imgMedi").attr("src", "images/media.png");
         //$("#imgAgenda").attr("src", "images/agenda.png");
@@ -91,7 +543,7 @@ $(document).ready(function () {
         //$("#dvPressRelease").removeClass('showdv').addClass('hidedv');
         //$("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
         //$("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
-
+      
         //$("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
         //$("#dvvDocuments").removeClass('showdv').addClass('hidedv');
         //$("#dvvLogin").removeClass('showdv').addClass('hidedv');
@@ -123,52 +575,413 @@ $(document).ready(function () {
 
     //Venue
     $("#P9").click(function () {
-        Location();
-        showPage("P9");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('hidedv').addClass('showdv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
+       
     });
 
     //For Venue from Home
     $("#loc").click(function () {
-        venueVal = "1";
-        if (venueVal == "1") {
-            Location();
-            showPage("loc");
-            //showPage("linkBackVenue");
-        }
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('hidedv').addClass('showdv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
+
     });
 
 
     //Travel India
     $("#P3").click(function () {
-        showPage("P3");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('hidedv').addClass('showdv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
     //Travel Africa
     $("#P4").click(function () {
-        showPage("P4");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('hidedv').addClass('showdv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
     //Visa Advisory
     $("#P5").click(function () {
-        showPage("P5");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('hidedv').addClass('showdv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
 
 
     //City Guide
     $("#P6").click(function () {
-        showPage("P6");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('hidedv').addClass('showdv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
+
+
     });
 
     //Form Required
     $("#P7").click(function () {
-        showPage("P7");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('hidedv').addClass('showdv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
+
+
     });
 
 
     //Yellow Fever
     $("#P8").click(function () {
-        showPage("P8");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('hidedv').addClass('showdv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
 
     });
 
@@ -177,170 +990,1186 @@ $(document).ready(function () {
 
     //Visa Advisory
     $("#P5").click(function () {
-        showPage("P5");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('hidedv').addClass('showdv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
 
 
+    //Visa Advisory
+    $("#P5").click(function () {
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('hidedv').addClass('showdv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
+    });
+
+
+
+    //Visa Advisory
+    $("#P5").click(function () {
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('hidedv').addClass('showdv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
+    });
+
     //Hotel List
     $("#P10").click(function () {
-        showPage("P10");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('hidedv').addClass('showdv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
 
     });
 
 
     $("#Anchor27").click(function () {
-        showPage("Anchor27");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        $("#page27").removeClass('hidedv').addClass('showdv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
     $("#Anchor28").click(function () {
-        showPage("Anchor28");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        $("#page27").removeClass('showdv').addClass('hidedv');
+
+
+        $("#page28").removeClass('hidedv').addClass('showdv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
 
     $("#Anchor29").click(function () {
-        showPage("Anchor29");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('hidedv').addClass('showdv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
     $("#Anchor30").click(function () {
-        showPage("Anchor30");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+
+        $("#page30").removeClass('hidedv').addClass('showdv');
+        $("#linkBackHotelList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
     $("#Anchor31").click(function () {
-        showPage("Anchor31");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+
+        $("#page31").removeClass('hidedv').addClass('showdv');
+        $("#linkBackHotelList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
     $("#Anchor32").click(function () {
-        showPage("Anchor32");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+
+        $("#page32").removeClass('hidedv').addClass('showdv');
+        $("#linkBackHotelList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
 
     $("#Anchor33").click(function () {
-        showPage("Anchor33");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+
+        $("#page33").removeClass('hidedv').addClass('showdv');
+        $("#linkBackHotelList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		 
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
+		  
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
     $("#Anchor34").click(function () {
-        showPage("Anchor34");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+
+        $("#page34").removeClass('hidedv').addClass('showdv');
+        $("#linkBackHotelList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		 
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
 
     $("#Anchor35").click(function () {
-        showPage("Anchor35");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('hidedv').addClass('showdv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		 
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
-
+    
 
     $("#Anchor36").click(function () {
-        showPage("Anchor36");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('hidedv').addClass('showdv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		 
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
     //Back Link Dashboard
     $("#linkBackDashboardList").click(function () {
-        showPage("linkBackDashboardList");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media_hover.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('hidedv').addClass('showdv');
+        
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');		 
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
 
     });
 
 
     //Back Link Hotel List
     $("#linkBackHotelList").click(function () {
-        showPage("linkBackHotelList");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media_hover.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('hidedv').addClass('showdv');
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		 
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
 
 
     //Back Link Press Release
     $("#linkBackPressRelease").click(function () {
-        showPage("linkBackPressRelease");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media_hover.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+
+        $("#linkBackMediaList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('hidedv').addClass('showdv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		 
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
 
 
 
     //Back Link Document
     $("#linkBackDocument").click(function () {
-        showPage("linkBackDocument");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media_hover.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        //$("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+
+        $("#linkBackMediaList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('hidedv').addClass('showdv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
-    //IAFS Logos
+	//IAFS Logos
     $("#IAFS_logo").click(function () {
-        showPage("IAFS_logo");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('hidedv').addClass('showdv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		 $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
     });
-    $("#iQuiz").click(function () {
-        alert('Page Under Construction…');
+	$("#iQuiz").click(function(){
+	    alert('Page Under Construction…');
+	});
+	//Notification Link
+	
+	$("#imgNoti").click(function () {
+	    try {
+	        //alert('notifi calling click event.');
+	        //debugger;
+	        notiVal = "1";
+	        if (aLogout == "0") {
+	            //debugger;
+	            alert('You are not logged in, Please log on first.');
+	            showPage("dvvLogin");
+	            //debugger;
+	        }
+	        if (aLogout == "1") {
+	            //debugger;
+	            showPage("dvNoti");
+	            //debugger;
+	        }
+	    }
+	    catch (ex) { ex.message }
+		 
     });
-    //Notification Link
-
-    $("#imgNoti").click(function () {
-        try {
-            alert('notifi calling click event.');
-            debugger;
-            notiVal = "1";
-
-            if (aLogout == "0") {
-                debugger;
-                alert('You are not logged in, Please log on first.');
-                showPage("dvvLogin");
-                debugger;
-            }
-            if (aLogout == "1") {
-                debugger;
-                showPage("dvNoti");
-                debugger;
-            }
-        }
-        catch (ex) { ex.message }
-
-    });
-
-
-    //Back Link ImgGallry
+	
+	
+	//Back Link ImgGallry
     $("#linkBackImgGallry").click(function () {
-        showPage("linkBackImgGallry");
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media_hover.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        //$("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
 
-    });
-    //Back Link Home
-    $("#linkBackVenue").click(function () {
-        try {
-            //debugger;
-            //alert("calling.....");
-            showPage("linkBackVenue");
-            showPage("dvHome");
-            //debugger;
-            //alert("calling.2222....");
-            //debugger;
-        }
-        catch (ex) { ex.message;}
-    });
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
 
+        $("#linkBackMediaList").removeClass('hidedv').addClass('showdv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+		$("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('hidedv').addClass('showdv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+		$("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+		  $("#dvContactus").removeClass('showdv').addClass('hidedv');
+		  
+		
+    });
+	
 });
 
 
+function showPage(val) {
+   
+    if (val == "dvNoti") {
 
+        $("#imgNoti").attr("src", "images/register_hover.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home.png");
+        $("#dvNoti").removeClass('hidedv').addClass('showdv');
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
 
-
-function Location() {
-    
-    var option = { enableHighAccuracy: true }
-    navigator.geolocation.getCurrentPosition(onsuccess, onerror, option);
-    function onsuccess(position) {
-        var slat = position.coords.latitude;
-        var slong = position.coords.longitude;
-        var elat = "28.631143";
-        var elong = "77.248942";
-        debugger;
-        //alert(slat+" : "+slong);
-        var str = "https://maps.google.com/maps?saddr=" + slat + "," + slong + "&daddr=" + elat + "," + elong + "&output=embed";
-
-        //$("#mapp5").html('<iframe id="#mapp" src="'+str+'" style="width:100%;height:450px;"  frameborder="0" style="border:0" allowfullscreen></iframe>');
-        //document.getElementById("mapp5").innerHTML("gfgg");
-        $(".jsk").html('<iframe id="#mapp" src="' + str + '" style="width:100%;height:512px;"  frameborder="0" style="border:0" allowfullscreen></iframe>');
-        //alert(str);
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+        $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+        $("#dvContactus").removeClass('showdv').addClass('hidedv');
     }
-    function onerror(error) {
-        debugger;
-        //alert(error.message);
+    else if (val == "dvHome") {
+
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('hidedv').addClass('showdv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+        $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+        $("#dvContactus").removeClass('showdv').addClass('hidedv');
+    }
+
+    else if (val == "dvvDashboard") {
+
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('showdv').addClass('hidedv');
+        $("#dvvDashboard").removeClass('hidedv').addClass('showdv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+        $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+        $("#dvContactus").removeClass('showdv').addClass('hidedv');
+    }
+
+    else if (val == "dvvLogin") {
+
+        $("#imgNoti").attr("src", "images/register.png");
+        $("#imgMedi").attr("src", "images/media.png");
+        $("#imgAgenda").attr("src", "images/agenda.png");
+        $("#imgHome").attr("src", "images/home_hover.png");
+        $("#dvMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvNoti").removeClass('showdv').addClass('hidedv');
+        $("#dvAgenda").removeClass('showdv').addClass('hidedv');
+        $("#dvHome").removeClass('showdv').addClass('hidedv');
+        $("#dvPhotoGallary").removeClass('showdv').addClass('hidedv');
+        $("#dvImageList").removeClass('showdv').addClass('hidedv');
+        $("#dvPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaCovrage").removeClass('showdv').addClass('hidedv');
+        $("#dvvMediaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvSpeechesStatements").removeClass('showdv').addClass('hidedv');
+        $("#dvvDocuments").removeClass('showdv').addClass('hidedv');
+        $("#dvvLogin").removeClass('hidedv').addClass('showdv');
+        $("#dvvDashboard").removeClass('showdv').addClass('hidedv');
+        $("#dvvVenue").removeClass('showdv').addClass('hidedv');
+        $("#dvvTravelIndia").removeClass('showdv').addClass('hidedv');
+        $("#dvTravelAfrica").removeClass('showdv').addClass('hidedv');
+        $("#dvvVisaAdvisory").removeClass('showdv').addClass('hidedv');
+        $("#dvvCityGuide").removeClass('showdv').addClass('hidedv');
+        $("#dvvYelllowFever").removeClass('showdv').addClass('hidedv');
+        $("#dvvFormRequired").removeClass('showdv').addClass('hidedv');
+        $("#page19").removeClass('showdv').addClass('hidedv');
+
+        //Hide all
+        $("#page27").removeClass('showdv').addClass('hidedv');
+        $("#page28").removeClass('showdv').addClass('hidedv');
+        $("#page29").removeClass('showdv').addClass('hidedv');
+        $("#page30").removeClass('showdv').addClass('hidedv');
+        $("#page31").removeClass('showdv').addClass('hidedv');
+        $("#page32").removeClass('showdv').addClass('hidedv');
+        $("#page33").removeClass('showdv').addClass('hidedv');
+        $("#page34").removeClass('showdv').addClass('hidedv');
+        $("#linkBackHotelList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDashboardList").removeClass('showdv').addClass('hidedv');
+        $("#linkBackMediaList").removeClass('showdv').addClass('hidedv');
+        $("#dvPRDescription").removeClass('showdv').addClass('hidedv');
+        $("#dvDocumentDescription").removeClass('showdv').addClass('hidedv');
+        $("#page36").removeClass('showdv').addClass('hidedv');
+        $("#page35").removeClass('showdv').addClass('hidedv');
+        $("#linkBackPressRelease").removeClass('showdv').addClass('hidedv');
+        $("#linkBackDocument").removeClass('showdv').addClass('hidedv');
+        $("#linkBackImgGallry").removeClass('showdv').addClass('hidedv');
+        $("#dvContactus").removeClass('showdv').addClass('hidedv');
     }
 
 }
-
-
-
-
-//Location();
